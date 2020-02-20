@@ -6,20 +6,22 @@ import { Switch, Route, Link } from "react-router-dom";
 
 export class Body extends React.Component {
   render() {
+      let index = 0;
     return (
       <div className="main-cont">
         <div className="tile-container">
           {data.episodes.map(d => {
-              let src = d["img"];
+              index += 1;
             return (
               <Link className = "tileLink" to={"/episodes" + d["route"]}><Tile
-                imgSrc={src}
-                episode={d["episode"]}
+                imgSrc={d["img"]}
+                episode={index}
                 date={d["date"]}
                 title={d["title"]}
                 descrip={d["description"]}
               /></Link>
             );
+
           })}
         </div>
       </div>

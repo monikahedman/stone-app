@@ -10,8 +10,9 @@ export class Main extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        
         <BrowserRouter>
+        <Header />
           <Switch>
             <Route path="/" exact={true} component={Body} />
             <Route path="/episodes" component={Episode}/>

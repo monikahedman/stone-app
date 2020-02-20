@@ -5,16 +5,19 @@ import data from "./data.json";
 import { BrowserRouter } from "react-router-dom";
 import { Switch, Route, Link } from "react-router-dom";
 
+
 export class Episode extends React.Component {
   render() {
+    let index = 0;
     return (
       <div className="main-cont">
         <div className="tile-container">
           {data.episodes.map(d => {
+              index += 1;
             return (
               <Route path={"/episodes" + d["route"]}>
                 <EpisodeDisplay
-                  episode={d["episode"]}
+                  episode={index}
                   date={d["date"]}
                   title={d["title"]}
                   images={d["images"]}
@@ -28,25 +31,29 @@ export class Episode extends React.Component {
   }
 }
 
-export class EpisodeDisplay extends React.Component {
+class EpisodeDisplay extends React.Component {
 
-    imageList = this.props.images;
+    get returnButton(){
+        return(
+            <Link to={'/'}><div className="home button">Home</div></Link>
+        )
+    }
 
   render() {
     return (
       <div className="full-episode">
         <h1 className="episode-text">{this.props.title}</h1>
         <div className="episode-information">
-          <p className="episode-text">Episode {this.props.episode}</p>
-          <p className="episode-text">{this.props.date}</p>
+          <p className="episode-text">Episode {this.props.episode},</p>
+          <p className="episode-text">Published {this.props.date}</p>
         </div>
-
+        {this.returnButton}
         <div className="image-container">
-            {this.imageList.map(i => (
+            {this.props.images.map(i => (
                 <img src = {i} />
             ))}
         </div>
-        <Link to={'/'}><div className="home button"> See All Episodes</div></Link>
+        {this.returnButton}
       </div>
     );
   }
