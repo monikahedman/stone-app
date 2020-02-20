@@ -1,0 +1,37 @@
+{
+    "episodes" : [
+        {
+            "episode": "1",
+            "date": "02/02/2020",
+            "title": "this is title 1",
+            "description": "This is description 1. Pretty crazy stuff out there isn't it",
+            "route": "/ep1",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        },
+        {
+            "episode": "2",
+            "date": "03/02/2020",
+            "title": "this is title 2",
+            "description": "This is description 2. Pretty crazy stuff out there isn't it",
+            "route": "/ep2",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        },
+        {
+            "episode": "3",
+            "date": "04/02/2020",
+            "title": "this is title 3",
+            "description": "This is description 3. Pretty crazy stuff out there isn't it",
+            "route": "/ep3",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        }
+    ]    
+}

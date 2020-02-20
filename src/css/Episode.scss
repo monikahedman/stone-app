@@ -1,0 +1,30 @@
+.full-episode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+
+    a{
+        text-decoration: none;
+    }
+
+    .episode-text{
+        margin: 4px;
+        text-transform: uppercase;
+    }
+
+    .episode-information{
+        display: flex;
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+    .image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
