@@ -1,23 +1,19 @@
 import React from "react";
 import "./css/App.scss";
 import "./css/Episode.scss";
-import data from "./data.json";
-import { BrowserRouter } from "react-router-dom";
-import { Switch, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { Overview } from "./Overview";
 
 export class Episode extends React.Component {
   render() {
-    let index = 0;
     return (
       <div className="main-cont">
         <div className="tile-container">
-          {data.episodes.map(d => {
-            index += 1;
+          {this.props.data.episodes.map((d, index) => {
             return (
-              <Route path={"/episodes" + d["route"]}>
+              <Route key={index} path={"/episodes" + d["route"]}>
                 <EpisodeDisplay
-                  episode={index}
+                  episode={index+1}
                   date={d["date"]}
                   title={d["title"]}
                   images={d["images"]}
@@ -51,8 +47,8 @@ class EpisodeDisplay extends React.Component {
           </div>
           {this.returnButton}
           <div className="image-container">
-            {this.props.images.map(i => (
-              <img src={i} />
+            {this.props.images.map((i, index) => (
+              <img src={i} alt-text={`episode ${index+1}`} alt={`episode ${index+1}`} key={index}/>
             ))}
           </div>
           {this.returnButton}

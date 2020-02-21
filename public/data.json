@@ -1,0 +1,34 @@
+{
+    "episodes" : [
+        {
+            "date": "02/02/2020",
+            "title": "Pilot",
+            "description": "After his epic victory against the Trojans, Odysseus gets a strange letter from E...",
+            "route": "/ep1",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        },
+        {
+            "date": "03/02/2020",
+            "title": "this is title 2",
+            "description": "This is description 2. Pretty crazy stuff out there isn't it",
+            "route": "/ep2",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        },
+        {
+            "date": "04/02/2020",
+            "title": "this is title 3",
+            "description": "This is description 3. Pretty crazy stuff out there isn't it",
+            "route": "/ep3",
+            "img": "/images/temp_img.jpg",
+            "images": [
+                "/images/temp_img.jpg", "/images/temp_img.jpg", "/images/temp_img.jpg"
+            ]
+        }
+    ]    
+}

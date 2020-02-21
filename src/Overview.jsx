@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/App.scss";
 import data from "./data.json";
-import { Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export class Overview extends React.Component {
   render() {
@@ -9,9 +9,9 @@ export class Overview extends React.Component {
       <div className="main-cont overview">
       <h2>Other Episodes</h2>
         <div className="tile-container overview">
-          {data.episodes.map(d => {
+          {data.episodes.map((d, index) => {
             return (
-              <Link to={"/episodes" + d["route"]} className="overview-tile">
+              <Link key={index} to={"/episodes" + d["route"]} className="overview-tile">
                 <span>{d["title"]}</span>
               </Link>
             );
